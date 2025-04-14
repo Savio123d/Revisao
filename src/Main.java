@@ -1,15 +1,22 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+        Empresa empresa = new Empresa("Tech Soluções");
+        Funcionario funcionario1 = new FuncionarioPJ("MISTER M",2900,23);
+        Funcionario funcionario2 = new FuncionarioCLT("Henrique",3299.99,20);
+        Funcionario funcionario3 = new FuncionarioCLT("Gabriel",3200,233);
+        Funcionario funcionario4 = new FuncionarioPJ("Maria",3000,42);
+        Funcionario funcionario5 = new FuncionarioCLT("Luisa",3299,23);
+
+        empresa.addFuncionario(funcionario1);
+        empresa.addFuncionario(funcionario2);
+        empresa.addFuncionario(funcionario3);
+        empresa.addFuncionario(funcionario4);
+        empresa.addFuncionario(funcionario5);
+        empresa.exibirFuncionarios();
+
     }
 }
